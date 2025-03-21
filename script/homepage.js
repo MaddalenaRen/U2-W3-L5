@@ -32,18 +32,19 @@ const getEvents = function () {
 
             data.forEach((wine) => {
                 row.innerHTML += `
-              <div class="col col-12 col-lg-3 col-md-4 col-sm-6">
-                <div class="card">
-                  <img src="${wine.imageUrl}" class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">${wine.name}</h5>
-                    <p class="card-text">${wine.description}</p>
-                    <p class="card-text">${wine.price.toLocaleString()}€ - ${wine.brand}</p>
-                    <a href="./details.html?id=${wine._id}" class="btn btn-primary">Vai ai dettagli</a>
-                  </div>
+                <div class="col col-12 col-lg-3 col-md-4 col-sm-6 my-3">
+                    <div class="card shadow-sm rounded-lg">
+                        <img src="${wine.imageUrl}" class="card-img-top" alt="${wine.name}" />
+                        <div class="card-body">
+                            <h5 class="card-title">${wine.name}</h5>
+                            <p class="card-text text-muted">${wine.description}</p>
+                            <p class="card-text font-weight-bold">${wine.price.toLocaleString()}€</p>
+                            <p class="card-text text-success">${wine.brand}</p>
+                            <a href="./details.html?id=${wine._id}" class="btn btn-primary btn-block">Vai ai dettagli</a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            `;
+                `;
             });
             document.getElementById("spinner-container").style.display = "none";
         })
