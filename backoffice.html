@@ -44,39 +44,54 @@
         </nav>
     </header>
     <main class="flex-grow-1">
-        <h2 class="text-center">Amministrazione</h2>
+        <h2 class="text-center my-4">Amministrazione</h2>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col col-12 col-lg-6 col-md-8">
-                    <form class="my-3" id="event-form">
+                <div class="col-12 col-lg-6 col-md-8">
+                    <form class="my-3 shadow-sm p-4 rounded bg-light border" id="event-form">
+                        <h3 class="text-center mb-4">Crea Nuovo Prodotto</h3>
+
+                        <!-- Immagine -->
                         <div class="mb-3">
                             <label for="image" class="form-label">Immagine prodotto</label>
-                            <input type="text" class="form-control" required id="image" aria-describedby="imgHelp"
-                                placeholder="link image" />
-                        </div>
-                        <div class="mb-3">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nome Prodotto</label>
-                                <input type="text" class="form-control" required id="name" aria-describedby="nameHelp"
-                                    placeholder="nome prodotto" />
-                            </div>
-                            <label for="description" class="form-label">Descrizione</label>
-                            <textarea class="form-control" required id="description" aria-describedby="descriptionHelp"
-                                placeholder="tipologia e descrzione del prodotto" rows="5"></textarea>
+                            <input type="text" class="form-control" id="image" required
+                                placeholder="Inserisci il link dell'immagine" />
                         </div>
 
+                        <!-- Nome prodotto -->
                         <div class="mb-3">
-                            <label for="price" class="form-label">Prezzo</label>
-                            <input type="text" class="form-control" required id="price" aria-describedby="priceHelp"
-                                placeholder="10" />
+                            <label for="name" class="form-label">Nome Prodotto</label>
+                            <input type="text" class="form-control" id="name" required
+                                placeholder="Nome del prodotto" />
                         </div>
+
+                        <!-- Descrizione -->
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descrizione</label>
+                            <textarea class="form-control" id="description" required
+                                placeholder="Tipologia e descrizione del prodotto" rows="5"></textarea>
+                        </div>
+
+                        <!-- Prezzo -->
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Prezzo (€)</label>
+                            <input type="text" class="form-control" id="price" required placeholder="10" />
+                        </div>
+
+                        <!-- Azienda -->
                         <div class="mb-3">
                             <label for="brand" class="form-label">Azienda</label>
-                            <input type="text" class="form-control" required id="brand" aria-describedby="brandHelp"
-                                placeholder="azienda produttrice" />
+                            <input type="text" class="form-control" id="brand" required
+                                placeholder="Azienda produttrice" />
                         </div>
-                        <button type="submit" class="btn btn-primary">Crea!</button>
+
+                        <!-- Bottone di invio -->
+                        <button type="submit" class="btn btn-primary w-100 py-2">Crea!</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </main>
 
     </main>
     <footer class="text-center py-3" style="background-color: #211F20;">
