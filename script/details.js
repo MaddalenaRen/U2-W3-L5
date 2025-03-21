@@ -53,7 +53,7 @@ const editWine = function () {
 }
 
 const deleteWine = function () {
-    fetch(eventsURL + eventId, {
+    fetch(eventsURL + '/' + eventId, {
         method: 'DELETE',
         headers: {
             "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RkMjQ2NjM4MzRiZjAwMTUwMDA2ZmUiLCJpYXQiOjE3NDI1NjE2OTEsImV4cCI6MTc0Mzc3MTI5MX0.h8E1vbYDfCB1CHPRXu85r9tP6fAJx58jPHJbKJdddek"

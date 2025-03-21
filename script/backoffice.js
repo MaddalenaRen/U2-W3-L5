@@ -73,9 +73,11 @@ form.addEventListener('submit', function (e) {
     if (eventId) {
         methodToUse = 'PUT'
         URLtoUse = eventsUrl + '/' + eventId
+        console.log("modificato")
     } else {
         methodToUse = 'POST'
         URLtoUse = eventsUrl
+        console.log("creato")
     }
     fetch(URLtoUse, {
         headers: {
